@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea1.ListaPage"
+             xmlns:local="clr-namespace:Tarea1"
+             Title="ListaPage">
+    <ContentPage.Content>
+        <ListView x:Name="plist" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Nombre}" />
+                            <Label Text="{Binding Apellido}" />
+                            <Label Text="{Binding ID}" />
+                            <Button Text="Agregar" Clicked="Crear_Clicked" />
+                            <Button Text="Eliminar" Clicked="Eliminar_Clicked" CommandParameter="{Binding ID}" />
+                            <Button Text="Actualizar" Clicked="Actualizar_Clicked" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
